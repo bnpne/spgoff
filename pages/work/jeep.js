@@ -23,7 +23,7 @@ export default function Jeep() {
             <Image
               onClick={() => setPlay(true)}
               className="credits-video-overlay"
-              src="https://images.ctfassets.net/w85pbwcrhwxy/4P7IjXVHqLmbIXCGpkzdSD/93b97118ff65b5a0ec7b8b7826ab20f8/jeep.jpg"
+              src="https://images.ctfassets.net/w85pbwcrhwxy/54wq3S7vtDfAVO3wjkgKHY/93fc7e2bc98909776c45c89518c3c9b8/Jeep_Donut_Wide.png"
               objectFit="cover"
               layout="fill"
               placeholder="blur"
@@ -96,7 +96,6 @@ export default function Jeep() {
           <div className="contact-info-first">
             <div>EMAIL: SPENCER@SPGOFF.COM</div>
             <div>PHONE: 208-313-7543</div>
-            <div>SALT LAKE CITY, UTAH, USA</div>
           </div>
           <div className="contact-info-second">
             <div>

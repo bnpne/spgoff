@@ -4,8 +4,7 @@ import { useRouter } from 'next/router'
 
 export default function MetaTags({ title, desc }) {
   const router = useRouter()
-  // TODO: Image
-  const image = ''
+  const image = '/sp.png'
 
   return (
     <Head>
@@ -31,19 +30,17 @@ export default function MetaTags({ title, desc }) {
       />
       <meta content={desc} name="description" />
       {/* TODO: Fix import this! */}
-      <meta property="og:url" content={`https://here${router.asPath}`} />
+      <meta
+        property="og:url"
+        content={`https://www.spgoff.com/${router.asPath}`}
+      />
       <meta property="og:type" content="website" />
       {/* TODO: NAME */}
-      <meta property="og:site_name" content="" />
+      <meta property="og:site_name" content={title} />
       <meta property="og:description" content={desc} />
       <meta property="og:title" content={title} />
       <meta property="og:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
-      {/* TODO: NAME */}
-      <meta name="twitter:site" content="@" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={desc} />
-      <meta name="twitter:image" content={image} />
     </Head>
   )
 }

@@ -12,7 +12,6 @@ export default function Contact() {
           <div className="contact-info-first">
             <div>EMAIL: SPENCER@SPGOFF.COM</div>
             <div>PHONE: 208-313-7543</div>
-            <div>SALT LAKE CITY, UTAH, USA</div>
           </div>
           <div className="contact-info-second">
             <div>

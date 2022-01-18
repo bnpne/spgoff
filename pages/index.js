@@ -83,7 +83,7 @@ export default function Index() {
         <div
           data-scroll
           data-scroll-delay=".05"
-          data-scroll-speed="1"
+          data-scroll-speed=".5"
           className="image-grid"
         >
           <p className="image-number">01</p>
@@ -94,7 +94,7 @@ export default function Index() {
               onMouseLeave={() => setShowOneTitle(false)}
             >
               <Image
-                src="https://images.ctfassets.net/w85pbwcrhwxy/4P7IjXVHqLmbIXCGpkzdSD/93b97118ff65b5a0ec7b8b7826ab20f8/jeep.jpg"
+                src="https://images.ctfassets.net/w85pbwcrhwxy/54wq3S7vtDfAVO3wjkgKHY/93fc7e2bc98909776c45c89518c3c9b8/Jeep_Donut_Wide.png"
                 objectFit="cover"
                 layout="fill"
                 placeholder="blur"
@@ -111,7 +111,7 @@ export default function Index() {
         <div
           data-scroll
           data-scroll-delay=".05"
-          data-scroll-speed="1"
+          data-scroll-speed=".5"
           className="image-grid"
         >
           <p className="image-number">02</p>
@@ -139,7 +139,7 @@ export default function Index() {
         <div
           data-scroll
           data-scroll-delay=".05"
-          data-scroll-speed="1"
+          data-scroll-speed=".5"
           className="image-grid"
         >
           <p className="image-number">03</p>
@@ -167,7 +167,7 @@ export default function Index() {
         <div
           data-scroll
           data-scroll-delay=".05"
-          data-scroll-speed="1"
+          data-scroll-speed=".5"
           className="image-grid"
         >
           <p className="image-number">04</p>
@@ -195,7 +195,7 @@ export default function Index() {
         <div
           data-scroll
           data-scroll-delay=".05"
-          data-scroll-speed="1"
+          data-scroll-speed=".5"
           className="image-grid"
         >
           <p className="image-number">05</p>
@@ -232,7 +232,6 @@ export default function Index() {
           <div className="contact-info-first">
             <div>EMAIL: SPENCER@SPGOFF.COM</div>
             <div>PHONE: 208-313-7543</div>
-            <div>SALT LAKE CITY, UTAH, USA</div>
           </div>
           <div className="contact-info-second">
             <div>
