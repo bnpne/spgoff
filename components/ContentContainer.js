@@ -7,8 +7,8 @@ const classNames = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
 
 export default function ContentContainer({ i, delay, speed }) {
   const [showTitle, setShowTitle] = useState(false)
-  var source = imageContent.at(i).cover
-  var title = imageContent.at(i).title
+  var source = imageContent[i].cover
+  var title = imageContent[i].title
 
   var classes = calculateClass(i)
 
@@ -35,7 +35,7 @@ export default function ContentContainer({ i, delay, speed }) {
           />
           {showTitle && (
             <div className="image-overlay">
-              <div>{`${titles.at(i)}`}</div>
+              <div>{`${titles[i]}`}</div>
             </div>
           )}
         </a>
@@ -45,7 +45,7 @@ export default function ContentContainer({ i, delay, speed }) {
 }
 
 function calculateClass(i) {
-  var className = 'image-' + classNames.at(i)
+  var className = 'image-' + classNames[i]
 
   return className
 }
