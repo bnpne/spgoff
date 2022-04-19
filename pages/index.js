@@ -75,7 +75,7 @@ export default function Index() {
       </section>
       <section className="image-section">
         {imageContent.map((image, key) => {
-          return <ContentContainer i={key} delay=".05" speed=".5" />
+          return <ContentContainer key={key} i={key} delay=".05" speed=".5" />
         })}
       </section>
       <section
