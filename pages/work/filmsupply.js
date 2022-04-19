@@ -5,9 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Jeep() {
-  const images = imageContent[3].images
+  const images = imageContent[1].images
   const [play, setPlay] = useState(false)
-  // console.log(images)
+
   return (
     <div className="main-container" data-scroll-section>
       <HeaderContainer />
@@ -16,15 +16,14 @@ export default function Jeep() {
           {play ? (
             <iframe
               className="credits-video-iframe"
-              src="https://player.vimeo.com/video/471155692?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
+              src="https://player.vimeo.com/video/682961658?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
               frameBorder="0"
-              allowFullScreen
             ></iframe>
           ) : (
             <Image
               onClick={() => setPlay(true)}
               className="credits-video-overlay"
-              src="https://images.ctfassets.net/w85pbwcrhwxy/4LVV4MVXMiV43C2BxykmwO/1c50e2da0bf1c6a7d13c137957cd7c73/latimes.jpg"
+              src={imageContent[1].cover}
               objectFit="cover"
               layout="fill"
               placeholder="blur"
@@ -32,21 +31,22 @@ export default function Jeep() {
             />
           )}
         </div>
-        <div className="credits-title">LA TIMES</div>
+        <div className="credits-title">I CAN DO THAT / FILMSUPPLY</div>
         <div className="credits-grid">
           <div className="credits-info-title">CREDITS</div>
           <div className="credits-info-first">
             <div>DIRECTOR BENJI ALLRED</div>
             <div>DIRECTOR OF PHOTOGRAPHY SPENCER GOFF</div>
-            <div>1ST AC TAYLOR GALBRAITH</div>
+            <div>PRODUCED BY THE FOLD</div>
             <div>
-              PRODUCED BY MERIK RICHARDSON, CHRISTINA DARAIS, CONNOR DEAN
+              PRODUCERS MERIK RICHARDSON, CHRISTIAN DARAIS, KARL DANIELSON
             </div>
-            <div>ART DIRECTOR CAMERON TRIBE</div>
-            <div>GAFFER MERIK RICHARDSON</div>
-            <div>GRIP JACK LOTT</div>
-            <div>GRIP BRENT REYNOLDS</div>
-            <div>HAIR & MUA MIKAELA KESTER</div>
+            <div>1ST AC KATO WONG</div>
+            <div>GAFFER TRENTON DAVIS, KATO WONG</div>
+            <div>EDIT BY TIMBER PICTURE CO</div>
+            <div>SOUND DESIGN CHRISTIAN DARAIS</div>
+            <div>COLORIST BENJI ALLRED</div>
+            <div>CLIENT FILMSUPPLY</div>
           </div>
         </div>
         <div className="credits-image-grid">
@@ -55,7 +55,7 @@ export default function Jeep() {
               index === 2 ||
               index === 5 ||
               index === 8 ||
-              index === images.length - 1
+              (index % 2 === 1 && index === images.length - 1)
             )
               return (
                 <div key={index} className="credits-images-full-span">

@@ -195,7 +195,7 @@ main {
 
 .image-second {
   grid-column: 7 / span 5;
-  width: 570px;
+  width: 650px;
   height: 400px;
   position: relative;
 }
@@ -217,6 +217,12 @@ main {
 .image-fifth {
   grid-column: 3 / span 7;
   width: 804px;
+  height: 400px;
+  position: relative;
+}
+.image-sixth {
+  grid-column: 7 / span 7;
+  width: 500px;
   height: 400px;
   position: relative;
 }
@@ -257,7 +263,10 @@ main {
 }
 
 .contact-info-second {
-  grid-column: 7 / span 7;
+  grid-column: 6 / span 2;
+}
+.contact-info-third {
+  grid-column: 9 / span 3;
 }
 
 .contact-large-first {

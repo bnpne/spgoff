@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Jeep() {
-  const images = imageContent[2]
+  const images = imageContent[2].images
   const [play, setPlay] = useState(false)
 
   return (

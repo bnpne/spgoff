@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import HeaderContainer from '../components/HeaderContainer'
 import Arrows from '../lib/svg'
+import ContentContainer from '../components/ContentContainer'
+import { imageContent } from '../lib/data'
 
 export default function Index() {
   const [showOneTitle, setShowOneTitle] = useState(false)
@@ -40,14 +42,6 @@ export default function Index() {
     <div className="main-container" data-scroll-section>
       <HeaderContainer />
       {/* BACKGROUND VIDEO */}
-      {/* <div className="video-section">
-        <video loop muted autoPlay className="video-container">
-          <source
-            src="https://videos.ctfassets.net/w85pbwcrhwxy/3WutUmPj1BWEKGOZjosDNb/484ea0b8584a679325ddcdb5f0de9da7/jeep-flag.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div> */}
       {/* IMAGE SECTION */}
       <section
         data-scroll
@@ -80,7 +74,10 @@ export default function Index() {
         <Arrows />
       </section>
       <section className="image-section">
-        <div
+        {imageContent.map((image, key) => {
+          return <ContentContainer i={key} delay=".05" speed=".5" />
+        })}
+        {/* <div
           data-scroll
           data-scroll-delay=".05"
           data-scroll-speed=".5"
@@ -219,7 +216,7 @@ export default function Index() {
               )}
             </a>
           </Link>
-        </div>
+        </div> */}
       </section>
       <section
         data-scroll

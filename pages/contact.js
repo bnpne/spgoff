@@ -25,6 +25,17 @@ export default function Contact() {
               </Link>
             </div>
           </div>
+          <div className="contact-info-third">
+            <div>REPRESENTATION</div>
+            <div>
+              <div>FILMSUPPLY</div>
+              <div>FOOTAGE LICENSING</div>
+              <Link href="mailto:licensing@filmsupply.com" target="_blank">
+                <a className="link-object">LICENSING@FILMSUPPLY.COM</a>
+              </Link>
+              <div>800-805-6802</div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
