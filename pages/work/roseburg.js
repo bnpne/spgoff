@@ -4,8 +4,8 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Jeep() {
-  const images = imageContent[4].images
+export default function Roseburg() {
+  const images = imageContent[6].images
   const [play, setPlay] = useState(false)
   // console.log(images)
   return (

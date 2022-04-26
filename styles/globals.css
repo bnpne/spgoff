@@ -222,7 +222,13 @@ main {
 }
 .image-sixth {
   grid-column: 7 / span 7;
-  width: 500px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+.image-seventh {
+  grid-column: 3 / span 7;
+  width: 700px;
   height: 400px;
   position: relative;
 }
@@ -482,6 +488,21 @@ main {
   }
 
   .image-fifth {
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+    grid-column: unset;
+  }
+
+  .image-sixth {
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+    grid-column: unset;
+  }
+  .image-seventh {
     width: 100%;
     height: 200px;
     display: block;

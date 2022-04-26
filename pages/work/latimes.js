@@ -4,8 +4,9 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Jeep() {
-  const images = imageContent[3].images
+export default function LaTimes() {
+  const pid = imageContent[5]
+  const images = pid.images
   const [play, setPlay] = useState(false)
   // console.log(images)
   return (
@@ -24,7 +25,7 @@ export default function Jeep() {
             <Image
               onClick={() => setPlay(true)}
               className="credits-video-overlay"
-              src="https://images.ctfassets.net/w85pbwcrhwxy/4LVV4MVXMiV43C2BxykmwO/1c50e2da0bf1c6a7d13c137957cd7c73/latimes.jpg"
+              src={pid.cover}
               objectFit="cover"
               layout="fill"
               placeholder="blur"

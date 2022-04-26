@@ -3,12 +3,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { imageContent, titles } from '../lib/data'
 
-const classNames = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+const classNames = [
+  'first',
+  'second',
+  'third',
+  'fourth',
+  'fifth',
+  'sixth',
+  'seventh',
+]
 
 export default function ContentContainer({ i, delay, speed }) {
   const [showTitle, setShowTitle] = useState(false)
   var source = imageContent[i].cover
-  var title = imageContent[i].title
+  var slug = imageContent[i].slug
 
   var classes = calculateClass(i)
 
@@ -20,7 +28,7 @@ export default function ContentContainer({ i, delay, speed }) {
       className="image-grid"
     >
       <p className="image-number">{i}</p>
-      <Link href={`/work/${title}`}>
+      <Link href={`/work/${slug}`}>
         <a
           className={classes}
           onMouseEnter={() => setShowTitle(true)}

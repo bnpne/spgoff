@@ -1,19 +1,12 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import Link from 'next/link'
-import Image from 'next/image'
 import HeaderContainer from '../components/HeaderContainer'
 import Arrows from '../lib/svg'
 import ContentContainer from '../components/ContentContainer'
 import { imageContent } from '../lib/data'
 
 export default function Index() {
-  const [showOneTitle, setShowOneTitle] = useState(false)
-  const [showTwoTitle, setShowTwoTitle] = useState(false)
-  const [showThreeTitle, setShowThreeTitle] = useState(false)
-  const [showFourTitle, setShowFourTitle] = useState(false)
-  const [showFiveTitle, setShowFiveTitle] = useState(false)
-
   const springOne = useSpring({
     config: { mass: 1, tension: 450, friction: 110 },
     from: { y: 80, opacity: 0 },

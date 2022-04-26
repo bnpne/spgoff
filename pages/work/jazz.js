@@ -4,8 +4,9 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function FilmSupply() {
-  const pid = imageContent[2]
+export default function Jazz() {
+  const pid = imageContent[1]
+
   const images = pid.images
   const [play, setPlay] = useState(false)
 
@@ -17,7 +18,7 @@ export default function FilmSupply() {
           {play ? (
             <iframe
               className="credits-video-iframe"
-              src="https://player.vimeo.com/video/682961658?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
+              src={`https://player.vimeo.com/video/${pid.video}?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false`}
               frameBorder="0"
             ></iframe>
           ) : (
@@ -32,22 +33,33 @@ export default function FilmSupply() {
             />
           )}
         </div>
-        <div className="credits-title">I CAN DO THAT / FILMSUPPLY</div>
+        <div className="credits-title">UTAH JAZZ | EMBRACE THE NOISE</div>
         <div className="credits-grid">
           <div className="credits-info-title">CREDITS</div>
+
           <div className="credits-info-first">
+            <div>CREATIVE DIRECTOR CHRIS GEORGE</div>
+            <div>AGENCY PRODUCER JOSH JOON LEE</div>
+            <div>PRODUCER CHRISTIAN DARAIS MERIK RICHARDSON</div>
             <div>DIRECTOR BENJI ALLRED</div>
-            <div>DIRECTOR OF PHOTOGRAPHY SPENCER GOFF</div>
-            <div>PRODUCED BY THE FOLD</div>
-            <div>
-              PRODUCERS MERIK RICHARDSON, CHRISTIAN DARAIS, KARL DANIELSON
-            </div>
-            <div>1ST AC KATO WONG</div>
-            <div>GAFFER TRENTON DAVIS, KATO WONG</div>
-            <div>EDIT BY TIMBER PICTURE CO</div>
-            <div>SOUND DESIGN CHRISTIAN DARAIS</div>
-            <div>COLORIST BENJI ALLRED</div>
-            <div>CLIENT FILMSUPPLY</div>
+            <div>DP SPENCER GOFF</div>
+            <div>STEADICAM JOHN WILLIAMS</div>
+            <div>AC MITCH GARCIA</div>
+            <div>GAFFER JARED JAYNES</div>
+            <div>KEY GRIP JR WILLIAMS</div>
+            <div>GRIP MAX WENHAM</div>
+            <div>GRIP KATO WONG</div>
+            <div>PA AMMON PASKETT</div>
+            <div>HMUA KATIE ADAIR</div>
+            <div>PRODUCTION DESIGNER CARISSA KLITGAARD</div>
+            <div>WARDROBE TY DAVIS</div>
+            <div>VEHICLE COORDINATOR ROB VINTAGE</div>
+            <div>JAZZ APPAREL THRIFTHOOD</div>
+            <div>EDITORS ANDY MATTHEWS, AARON THARPE</div>
+            <div>MUSIC AND SOUND BRENDEN BYTHEWAY, CHRISTIAN DARAIS</div>
+            <div>COLOR BENJI ALLRED</div>
+            <div>ADDITIONAL TITLING AUSTIN BERENYI</div>
+            <div>SPOKESMAN DEMETRIUS DANIELS</div>
           </div>
         </div>
         <div className="credits-image-grid">

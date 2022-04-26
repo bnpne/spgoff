@@ -1,30 +1,40 @@
-import React, { useState } from 'react'
-import HeaderContainer from '../../components/HeaderContainer'
-import { imageContent } from '../../lib/data'
+import React, { useState, useEffect } from 'react'
+import HeaderContainer from '../components/HeaderContainer'
+import { imageContent, titles } from '../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-export default function FilmSupply() {
-  const pid = imageContent[2]
-  const images = pid.images
+export default function Post() {
+  const router = useRouter()
+  const { slug } = router.query
+  // const dataId = imageContent.indexOf({ slug: `${pid}` })
+
+  console.log(slug)
+
+  const images = imageContent[dataId].images
+  const title = titles[dataId]
+  const videoId = imagesContent[dataId].video
   const [play, setPlay] = useState(false)
 
   return (
     <div className="main-container" data-scroll-section>
       <HeaderContainer />
       <section className="credits-container">
+        {/* CREATE A LOADER */}
         <div className="credits-video-container">
           {play ? (
             <iframe
               className="credits-video-iframe"
-              src="https://player.vimeo.com/video/682961658?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
+              src={`https://player.vimeo.com/video/${videoId}?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false`}
               frameBorder="0"
+              allowFullScreen
             ></iframe>
           ) : (
             <Image
               onClick={() => setPlay(true)}
               className="credits-video-overlay"
-              src={pid.cover}
+              src="https://images.ctfassets.net/w85pbwcrhwxy/JLgWYXyzBRDWroGFhKsu9/26ed6720c19658379d4269d88843b75f/zero.jpg"
               objectFit="cover"
               layout="fill"
               placeholder="blur"
@@ -32,22 +42,21 @@ export default function FilmSupply() {
             />
           )}
         </div>
-        <div className="credits-title">I CAN DO THAT / FILMSUPPLY</div>
+        <div className="credits-title">{title}</div>
         <div className="credits-grid">
           <div className="credits-info-title">CREDITS</div>
           <div className="credits-info-first">
-            <div>DIRECTOR BENJI ALLRED</div>
+            <div>DIRECTOR CAMERON GOOLD</div>
             <div>DIRECTOR OF PHOTOGRAPHY SPENCER GOFF</div>
-            <div>PRODUCED BY THE FOLD</div>
+            <div>PRODUCTION COMPANY H.A.G.S.</div>
+            <div>PRODUCER ETHEN ROBERTS, PATRICK ALLRED</div>
             <div>
-              PRODUCERS MERIK RICHARDSON, CHRISTIAN DARAIS, KARL DANIELSON
+              STUNT RIDERS KORTEL AUTREY, ETHEN ROBERTS, MEREDITH DEVINE
             </div>
-            <div>1ST AC KATO WONG</div>
-            <div>GAFFER TRENTON DAVIS, KATO WONG</div>
-            <div>EDIT BY TIMBER PICTURE CO</div>
-            <div>SOUND DESIGN CHRISTIAN DARAIS</div>
-            <div>COLORIST BENJI ALLRED</div>
-            <div>CLIENT FILMSUPPLY</div>
+            <div>STUND RIDERS JOSH ROBERTS, TYSON BLACK, NICK DEAN</div>
+            <div>PHOTOGRAPHERS AARON BRIMHALL, MIKE BIGGINS</div>
+            <div>1ST AC BRENT REYNOLDS</div>
+            <div>GIMBAL TECH BRENT REYNOLDS</div>
           </div>
         </div>
         <div className="credits-image-grid">
@@ -56,7 +65,7 @@ export default function FilmSupply() {
               index === 2 ||
               index === 5 ||
               index === 8 ||
-              (index % 2 === 1 && index === images.length - 1)
+              index === images.length - 1
             )
               return (
                 <div key={index} className="credits-images-full-span">

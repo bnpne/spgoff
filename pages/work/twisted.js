@@ -4,8 +4,8 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Jeep() {
-  const images = imageContent[1].images
+export default function Twisted() {
+  const images = imageContent[3].images
   const [play, setPlay] = useState(false)
   // console.log(images)
   return (

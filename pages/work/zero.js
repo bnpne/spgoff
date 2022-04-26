@@ -4,8 +4,8 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Jeep() {
-  const images = imageContent[2].images
+export default function Zero() {
+  const images = imageContent[4].images
   const [play, setPlay] = useState(false)
 
   return (
@@ -33,7 +33,7 @@ export default function Jeep() {
             />
           )}
         </div>
-        <div className="credits-title">ZERO MOTORCYCLES</div>
+        <div className="credits-title">ZERO | FAST FORWARD</div>
         <div className="credits-grid">
           <div className="credits-info-title">CREDITS</div>
           <div className="credits-info-first">
