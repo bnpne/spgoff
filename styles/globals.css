@@ -228,7 +228,13 @@ main {
 }
 .image-seventh {
   grid-column: 3 / span 7;
-  width: 700px;
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+.image-eighth {
+  grid-column: 6 / span 7;
+  width: 650px;
   height: 400px;
   position: relative;
 }
@@ -502,7 +508,16 @@ main {
     position: relative;
     grid-column: unset;
   }
+
   .image-seventh {
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+    grid-column: unset;
+  }
+
+  .image-eighth {
     width: 100%;
     height: 200px;
     display: block;

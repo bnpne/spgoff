@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Roseburg() {
-  const images = imageContent[6].images
+  const images = imageContent[7].images
   const [play, setPlay] = useState(false)
   // console.log(images)
   return (

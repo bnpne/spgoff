@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Zero() {
-  const images = imageContent[4].images
+  const images = imageContent[5].images
   const [play, setPlay] = useState(false)
 
   return (

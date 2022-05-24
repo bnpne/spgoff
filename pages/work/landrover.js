@@ -4,11 +4,10 @@ import { imageContent } from '../../lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function LaTimes() {
-  const pid = imageContent[6]
-  const images = pid.images
+export default function Jeep() {
+  const images = imageContent[3].images
   const [play, setPlay] = useState(false)
-  // console.log(images)
+
   return (
     <div className="main-container" data-scroll-section>
       <HeaderContainer />
@@ -17,15 +16,14 @@ export default function LaTimes() {
           {play ? (
             <iframe
               className="credits-video-iframe"
-              src="https://player.vimeo.com/video/471155692?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
+              src="https://player.vimeo.com/video/703946444?loop=true&autoplay=true&muted=false&gesture=media&playsinline=true&byline=false&portrait=false&title=false&transparent=false"
               frameBorder="0"
-              allowFullScreen
             ></iframe>
           ) : (
             <Image
               onClick={() => setPlay(true)}
               className="credits-video-overlay"
-              src={pid.cover}
+              src="https://images.ctfassets.net/w85pbwcrhwxy/5jT0tKCB0PVDPO3ZgUbPf4/a62147965f612a9df0a004a52e23b728/Land_Rover_FOR_COLOR.00_00_10_03.Still009.jpg"
               objectFit="cover"
               layout="fill"
               placeholder="blur"
@@ -33,21 +31,24 @@ export default function LaTimes() {
             />
           )}
         </div>
-        <div className="credits-title">LA TIMES</div>
+        <div className="credits-title">LAND ROVER</div>
         <div className="credits-grid">
           <div className="credits-info-title">CREDITS</div>
           <div className="credits-info-first">
-            <div>DIRECTOR BENJI ALLRED</div>
-            <div>DIRECTOR OF PHOTOGRAPHY SPENCER GOFF</div>
-            <div>1ST AC TAYLOR GALBRAITH</div>
-            <div>
-              PRODUCED BY MERIK RICHARDSON, CHRISTINA DARAIS, CONNOR DEAN
-            </div>
-            <div>ART DIRECTOR CAMERON TRIBE</div>
-            <div>GAFFER MERIK RICHARDSON</div>
-            <div>GRIP JACK LOTT</div>
-            <div>GRIP BRENT REYNOLDS</div>
-            <div>HAIR & MUA MIKAELA KESTER</div>
+            <div>DIRECTOR CALEB KUHL</div>
+            <div>DP SPENCER GOFF</div>
+            <div>COLOR BY COMPANY 3</div>
+            <div>COLORIST TYLER ROTH</div>
+            <div>SOUND DESIGN BY CHRISTIAN DARAIS</div>
+            <div>EDIT BY ANDY MATTHEWS, AARON THARP, TIMBER PICTURE CO.</div>
+            <div>VFX BY AARON THARP, TIMBER PICTURE CO.</div>
+            <div>1ST AC ASHER BROWN</div>
+            <div>PRODUCER TRENTON DAVIS, KARL DANIELSON</div>
+            <div>PRODUCTION COMPANY COPPERFISH PRODUCTIONS</div>
+            <div>ARM CAR TEAM OVERRIDE FILMS</div>
+            <div>ARM CAR DRIVER JORDAN OVERMAN</div>
+            <div>DRONE OPERATOR PJ HALE, BRYCE PRESTWICH</div>
+            <div>STUNT DRIVER CHANLER GODFREY</div>
           </div>
         </div>
         <div className="credits-image-grid">
@@ -56,7 +57,7 @@ export default function LaTimes() {
               index === 2 ||
               index === 5 ||
               index === 8 ||
-              index === images.length - 1
+              (index % 2 === 1 && index === images.length - 1)
             )
               return (
                 <div key={index} className="credits-images-full-span">
