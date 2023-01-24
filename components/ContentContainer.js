@@ -12,6 +12,7 @@ const classNames = [
   'sixth',
   'seventh',
   'eighth',
+  'ninth',
 ]
 
 export default function ContentContainer({ i, delay, speed }) {
